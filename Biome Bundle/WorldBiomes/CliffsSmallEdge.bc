@@ -22,7 +22,7 @@ BiomeRarity: 100
 
 BiomeColor: #99F57B
 
-ReplaceToBiomeName: Jungle
+ReplaceToBiomeName: minecraft:jungle
 
 ####################
 # Isle biomes only #
@@ -113,7 +113,7 @@ GroundBlock: SANDSTONE
 
 SurfaceAndGroundControl: 
 
-ReplacedBlocks: (SAND,STAINED_CLAY:1,69,211),(SANDSTONE,STAINED_CLAY:1,69,211),(STONE,STAINED_CLAY:1,63,211),(AIR,LAVA,1,10)
+ReplacedBlocks: (SAND,STAINED_CLAY:1,69,211),(SANDSTONE,STAINED_CLAY:1,69,211),(STONE,STAINED_CLAY:1,63,211),(AIR,STATIONARY_LAVA,1,10)
 
 ################################
 # Water / Lava & Frozen States #
@@ -154,6 +154,16 @@ FoliageColor: #FFFFFF
 
 FoliageColorIsMultiplier: true
 
+FogColor: #000000
+
+FogDensity: 0.5
+
+FogTimeWeight: 0.1
+
+FogRainWeight: 0.25
+
+FogThunderWeight: 0.5
+
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -173,38 +183,40 @@ Ore(STONE:5,32,20,100.0,0,69,STONE:0)
 Ore(STONE:3,32,20,100.0,0,69,STONE:0)
 Ore(STONE:1,32,20,100.0,0,69,STONE:0)
 CustomObject(cavepocket1Copy,cavepocket2Copy,cavepocket3Copy,cavepocket9Copy,cavepocket4,cavepocket5,cavepocket6,cavepocket7,cavepocket8,cavepocket10,cavepocket11,cavepocket12,cavepocket13,cavepocket14,cavepocket15,cavepocket16,cavepocket17)
-SmallLake(LAVA,6,33.0,1,8)
+SmallLake(STATIONARY_LAVA,6,33.0,1,8)
 CustomStructure(SandRuinsPath1,0.1)
 CustomObject(Geode1,Geode2,Geode3,Geode4,Geode5,Geode6)
 CustomObject(UndergroundDungeon1,UndergroundDungeon2,UndergroundDungeon3,UndergroundDungeon4,UndergroundDungeon5)
-Ore(GRASS,25,75,100.0,63,67,SAND)
-UnderWaterOre(SAND,7,4,100.0,DIRT,GRASS)
-UnderWaterOre(GRAVEL,8,1,100.0,DIRT,STONE:0)
+Ore(GRASS,25,75,100.0,63,67,SAND:0)
+UnderWaterOre(SAND,7,4,100.0,DIRT:0,GRASS:0)
+UnderWaterOre(GRAVEL,8,1,100.0,DIRT:0,STONE:0)
 CustomObject(VolcanoHardClay1,VolcanoHardClay2)
 CustomObject(ShrubPalm1,ShrubPalm2)
 CustomObject(JunglePalm1,JunglePalm2,JunglePalm3,JunglePalm4,JunglePalm5,JunglePalm6,JunglePalm7,JunglePalm8,JunglePalm9)
 CustomObject(JunglePalm1,JunglePalm2,JunglePalm3,JunglePalm4,JunglePalm5,JunglePalm6,JunglePalm7,JunglePalm8,JunglePalm9)
 CustomObject(SandOasis1,SandOasis2,SandOasis3,SandOasis4,SandOasis5)
 CustomObject(SandSmallLake1,SandSmallLake2,SandSmallLake3,SandSmallLake4,SandSmallLake5,SandSmallLake6,SandSmallLake7,SandSmallLake8,SandSmallLake9,SandSmallLake10,SandSmallLake11,SandSmallLake12)
-Plant(Poppy,4,100.0,0,139,GRASS,DIRT)
-Plant(Dandelion,2,100.0,0,139,GRASS,DIRT)
-Plant(Lilac,2,100.0,0,139,GRASS,DIRT)
-Plant(RoseBush,2,100.0,0,139,GRASS,DIRT)
-Plant(Peony,2,100.0,0,139,GRASS,DIRT)
-Plant(RedMushroom,1,50.0,0,139,GRASS,DIRT)
-Plant(BrownMushroom,1,50.0,0,139,GRASS,DIRT)
-Grass(Fern,NotGrouped,30,100.0,GRASS,DIRT)
-Grass(Tallgrass,NotGrouped,30,10.0,GRASS,DIRT)
-Plant(PUMPKIN,1,3.0,0,139,GRASS)
+Plant(Poppy,4,100.0,0,139,GRASS:0,DIRT:0)
+Plant(Dandelion,2,100.0,0,139,GRASS:0,DIRT:0)
+Plant(Lilac,2,100.0,0,139,GRASS:0,DIRT:0)
+Plant(RoseBush,2,100.0,0,139,GRASS:0,DIRT:0)
+Plant(Peony,2,100.0,0,139,GRASS:0,DIRT:0)
+Plant(RedMushroom,1,50.0,0,139,GRASS:0,DIRT:0)
+Plant(BrownMushroom,1,50.0,0,139,GRASS:0,DIRT:0)
+Grass(Fern,NotGrouped,30,100.0,GRASS:0,DIRT:0)
+Grass(Tallgrass,NotGrouped,30,10.0,GRASS:0,DIRT:0)
+Plant(PUMPKIN,1,3.0,0,139,GRASS:0)
 Vines(10,100.0,61,255)
 AboveWaterRes(WATER_LILY,1,100.0)
-Plant(MELON_BLOCK,1,100.0,0,139,GRASS,DIRT,DIRT:2)
+Plant(MELON_BLOCK,1,100.0,0,139,GRASS:0,DIRT:0,DIRT:2)
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
 # |                         Sapling resource                        | #
 # +-----------------------------------------------------------------+ #
 #######################################################################
+
+InheritSaplingResource: false
 
 
 #######################################################################

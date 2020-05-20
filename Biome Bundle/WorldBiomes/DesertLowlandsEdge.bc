@@ -22,7 +22,7 @@ BiomeRarity: 100
 
 BiomeColor: #7B5A45
 
-ReplaceToBiomeName: Desert
+ReplaceToBiomeName: minecraft:desert
 
 ####################
 # Isle biomes only #
@@ -113,7 +113,7 @@ GroundBlock: SANDSTONE
 
 SurfaceAndGroundControl: 
 
-ReplacedBlocks: (SAND,GRASS,74,111),(AIR,LAVA,1,10)
+ReplacedBlocks: (SAND,GRASS,74,111),(AIR,STATIONARY_LAVA,1,10)
 
 ################################
 # Water / Lava & Frozen States #
@@ -154,6 +154,16 @@ FoliageColor: #FFFFFF
 
 FoliageColorIsMultiplier: true
 
+FogColor: #000000
+
+FogDensity: 0.5
+
+FogTimeWeight: 0.1
+
+FogRainWeight: 0.25
+
+FogThunderWeight: 0.5
+
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -177,26 +187,28 @@ Ore(SAND,8,10,50.0,0,255,STONE:0,HARD_CLAY)
 Ore(STONE:5,32,20,100.0,0,69,STONE:0)
 Ore(STONE:3,32,20,100.0,0,69,STONE:0)
 Ore(STONE:1,32,20,100.0,0,69,STONE:0)
-SmallLake(LAVA,6,33.0,1,8)
+SmallLake(STATIONARY_LAVA,6,33.0,1,8)
 CustomObject(DesertRockMedium4,DesertRockMedium3,DesertRockMedium2,DesertRockMedium1,DesertRockLarge4,DesertRockLarge3,DesertRockLarge2,DesertRockLarge1,DesertRockSmall4,DesertRockSmall3,DesertRockSmall2,DesertRockSmall1,DesertRockMedium5)
-Ore(SANDSTONE,25,100,10.0,51,77,SAND)
-Ore(DIRT,20,100,10.0,51,77,SAND)
-Ore(STONE,20,100,90.0,66,74,SAND)
-Ore(STONE,20,50,90.0,61,65,SAND)
-Plant(LargeFern,20,75.0,74,139,GRASS,DIRT)
-Plant(Fern,20,75.0,74,139,GRASS,DIRT)
-Grass(DeadBush,NotGrouped,4,75.0,GRASS,DIRT)
-Boulder(STONE,2,10.0,74,111,GRASS)
+Ore(SANDSTONE,25,100,10.0,51,77,SAND:0)
+Ore(DIRT,20,100,10.0,51,77,SAND:0)
+Ore(STONE,20,100,90.0,66,74,SAND:0)
+Ore(STONE,20,50,90.0,61,65,SAND:0)
+Plant(LargeFern,20,75.0,74,139,GRASS:0,DIRT:0)
+Plant(Fern,20,75.0,74,139,GRASS:0,DIRT:0)
+Grass(DeadBush,NotGrouped,4,75.0,GRASS:0,DIRT:0)
+Boulder(STONE,2,10.0,74,111,GRASS:0)
 Tree(1,Acacia,50,Tree,100)
 CustomObject(AcaciaSavanna9,AcaciaSavanna8,AcaciaSavanna7,AcaciaSavanna6,AcaciaSavanna5,AcaciaSavanna4,AcaciaSavanna3,AcaciaSavanna2,AcaciaSavanna18,AcaciaSavanna17,AcaciaSavanna16,AcaciaSavanna15,AcaciaSavanna14,AcaciaSavanna13,AcaciaSavanna12,AcaciaSavanna11,AcaciaSavanna10,AcaciaSavanna1)
-Well(SANDSTONE,STEP:1,WATER,1,0.1,13,139,SAND)
-Reed(SUGAR_CANE_BLOCK,3,100.0,0,139,GRASS,DIRT,SAND)
+Well(SANDSTONE,STEP:1,STATIONARY_WATER,1,0.1,13,139,SAND:0)
+Reed(SUGAR_CANE_BLOCK,3,100.0,0,139,GRASS:0,DIRT:0,SAND:0)
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
 # |                         Sapling resource                        | #
 # +-----------------------------------------------------------------+ #
 #######################################################################
+
+InheritSaplingResource: false
 
 
 #######################################################################

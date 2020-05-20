@@ -22,6 +22,8 @@ BiomeRarity: 100
 
 BiomeColor: #B6D0FF
 
+ReplaceToBiomeName: minecraft:void
+
 ####################
 # Isle biomes only #
 ####################
@@ -123,7 +125,7 @@ WaterLevelMax: 63
 
 WaterLevelMin: 0
 
-WaterBlock: WATER
+WaterBlock: STATIONARY_WATER
 
 IceBlock: ICE
 
@@ -152,6 +154,16 @@ FoliageColor: #FFFFFF
 
 FoliageColorIsMultiplier: true
 
+FogColor: #000000
+
+FogDensity: 0.5
+
+FogTimeWeight: 0.1
+
+FogRainWeight: 0.25
+
+FogThunderWeight: 0.5
+
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -165,16 +177,16 @@ Ore(STONE:1,33,10,100.0,0,90,STONE:0)
 Ore(STONE:3,33,10,100.0,0,90,STONE:0)
 Ore(STONE:5,33,10,100.0,0,90,STONE:0)
 UnderGroundLake(25,60,2,5.0,0,60)
-Liquid(WATER,20,100.0,19,139,STONE:0)
-Liquid(LAVA,10,100.0,19,139,STONE:0)
-SmallLake(WATER,4,7.0,19,130)
-SmallLake(LAVA,2,1.0,19,130)
-UnderWaterOre(SAND,7,3,100.0,DIRT,GRASS)
-UnderWaterOre(CLAY,7,3,100.0,DIRT,STONE:0,GRAVEL)
-UnderWaterOre(GRAVEL,6,1,100.0,DIRT,GRASS)
-Grass(Tallgrass,NotGrouped,10,100.0,GRASS,DIRT)
-Plant(Dandelion,2,100.0,0,139,GRASS,DIRT)
-Plant(PUMPKIN,1,3.0,0,139,GRASS)
+Liquid(STATIONARY_WATER,20,100.0,19,139,STONE:0)
+Liquid(STATIONARY_LAVA,10,100.0,19,139,STONE:0)
+SmallLake(STATIONARY_WATER,4,7.0,19,130)
+SmallLake(STATIONARY_LAVA,2,1.0,19,130)
+UnderWaterOre(SAND,7,3,100.0,DIRT:0,GRASS:0)
+UnderWaterOre(CLAY,7,3,100.0,DIRT:0,STONE:0,GRAVEL)
+UnderWaterOre(GRAVEL,6,1,100.0,DIRT:0,GRASS:0)
+Grass(Tallgrass,NotGrouped,10,100.0,GRASS:0,DIRT:0)
+Plant(Dandelion,2,100.0,0,139,GRASS:0,DIRT:0)
+Plant(PUMPKIN,1,3.0,0,139,GRASS:0)
 CustomObject(UseWorld)
 
 #######################################################################
@@ -182,6 +194,8 @@ CustomObject(UseWorld)
 # |                         Sapling resource                        | #
 # +-----------------------------------------------------------------+ #
 #######################################################################
+
+InheritSaplingResource: false
 
 
 #######################################################################

@@ -22,7 +22,7 @@ BiomeRarity: 98
 
 BiomeColor: #A4D7D0
 
-ReplaceToBiomeName: Taiga
+ReplaceToBiomeName: minecraft:taiga
 
 ####################
 # Isle biomes only #
@@ -113,7 +113,7 @@ GroundBlock: STONE:3
 
 SurfaceAndGroundControl: 
 
-ReplacedBlocks: (DIRT,STONE:3,63,211),(GRAVEL,STONE:3,63,211),(SAND,STONE:3,63,211),(AIR,LAVA,1,10)
+ReplacedBlocks: (DIRT,STONE:3,63,211),(GRAVEL,STONE:3,63,211),(SAND,STONE:3,63,211),(AIR,STATIONARY_LAVA,1,10)
 
 ################################
 # Water / Lava & Frozen States #
@@ -154,6 +154,16 @@ FoliageColor: #FFFFFF
 
 FoliageColorIsMultiplier: true
 
+FogColor: #000000
+
+FogDensity: 0.5
+
+FogTimeWeight: 0.1
+
+FogRainWeight: 0.25
+
+FogThunderWeight: 0.5
+
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -169,14 +179,14 @@ Ore(REDSTONE_ORE,8,8,100.0,0,15,STONE:0)
 Ore(DIAMOND_ORE,8,1,100.0,0,15,STONE:0)
 Ore(LAPIS_ORE,7,1,100.0,0,15,STONE:0)
 Ore(EMERALD_ORE,7,1,75.0,4,32,STONE:0)
-Ore(DIRT:2,25,35,90.0,71,76,GRASS)
+Ore(DIRT:2,25,35,90.0,71,76,GRASS:0)
 UnderGroundLake(25,60,2,5.0,0,61)
 CustomObject(cavepocket1Copy,cavepocket2Copy,cavepocket3Copy,cavepocket9Copy,cavepocket4,cavepocket5,cavepocket6,cavepocket7,cavepocket8,cavepocket10,cavepocket11,cavepocket12,cavepocket13,cavepocket14,cavepocket15,cavepocket16,cavepocket17)
-SmallLake(LAVA,6,33.0,1,8)
+SmallLake(STATIONARY_LAVA,6,33.0,1,8)
 UnderGroundLake(25,60,2,5.0,0,50)
-UnderWaterOre(SAND,7,3,100.0,DIRT,GRASS)
-UnderWaterOre(CLAY,7,3,100.0,DIRT,STONE:0,GRAVEL)
-UnderWaterOre(GRAVEL,6,1,100.0,DIRT,GRASS)
+UnderWaterOre(SAND,7,3,100.0,DIRT:0,GRASS:0)
+UnderWaterOre(CLAY,7,3,100.0,DIRT:0,STONE:0,GRAVEL)
+UnderWaterOre(GRAVEL,6,1,100.0,DIRT:0,GRASS:0)
 CustomObject(SmallLake1,SmallLake2,SmallLake3,SmallLake4,SmallLake5,SmallLake6,SmallLake7,SmallLake8,SmallLake9,SmallLake10,SmallLake11,SmallLake12)
 CustomStructure(TotemBase,0.1,Bricktowerbranching,0.1,GravelOreT1,1.0)
 
@@ -185,6 +195,8 @@ CustomStructure(TotemBase,0.1,Bricktowerbranching,0.1,GravelOreT1,1.0)
 # |                         Sapling resource                        | #
 # +-----------------------------------------------------------------+ #
 #######################################################################
+
+InheritSaplingResource: false
 
 
 #######################################################################

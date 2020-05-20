@@ -22,7 +22,7 @@ BiomeRarity: 100
 
 BiomeColor: #056621
 
-ReplaceToBiomeName: Savanna
+ReplaceToBiomeName: minecraft:savanna
 
 ####################
 # Isle biomes only #
@@ -113,7 +113,7 @@ GroundBlock: RED_SANDSTONE
 
 SurfaceAndGroundControl: 
 
-ReplacedBlocks: (STONE,RED_SANDSTONE,63,250),(SAND,STAINED_CLAY:4,81,84),(RED_SANDSTONE,STAINED_CLAY:4,81,84),(SAND,STAINED_CLAY:4,92,93),(RED_SANDSTONE,STAINED_CLAY:4,92,93),(AIR,LAVA,1,10)
+ReplacedBlocks: (STONE,RED_SANDSTONE,63,250),(SAND,STAINED_CLAY:4,81,84),(RED_SANDSTONE,STAINED_CLAY:4,81,84),(SAND,STAINED_CLAY:4,92,93),(RED_SANDSTONE,STAINED_CLAY:4,92,93),(AIR,STATIONARY_LAVA,1,10)
 
 ################################
 # Water / Lava & Frozen States #
@@ -154,6 +154,16 @@ FoliageColor: #FFFFFF
 
 FoliageColorIsMultiplier: true
 
+FogColor: #000000
+
+FogDensity: 0.5
+
+FogTimeWeight: 0.1
+
+FogRainWeight: 0.25
+
+FogThunderWeight: 0.5
+
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -175,14 +185,14 @@ Ore(GRAVEL,32,10,50.0,0,255,STONE:0,HARD_CLAY)
 Ore(CLAY,8,10,50.0,0,255,STONE:0,HARD_CLAY)
 Ore(SAND,8,10,50.0,0,255,STONE:0,HARD_CLAY)
 CustomObject(cavepocket1Copy,cavepocket2Copy,cavepocket3Copy,cavepocket9Copy,cavepocket4,cavepocket5,cavepocket6,cavepocket7,cavepocket8,cavepocket10,cavepocket11,cavepocket12,cavepocket13,cavepocket14,cavepocket15,cavepocket16,cavepocket17)
-SmallLake(LAVA,6,33.0,1,8)
+SmallLake(STATIONARY_LAVA,6,33.0,1,8)
 Ore(STONE:5,32,20,100.0,0,69,STONE:0)
 Ore(STONE:3,32,20,100.0,0,69,STONE:0)
 Ore(STONE:1,32,20,100.0,0,69,STONE:0)
-Ore(DIRT:1,20,25,90.0,61,64,SAND)
-Ore(GRASS,20,100,90.0,62,64,SAND)
-Ore(GRASS,20,100,50.0,107,108,SAND)
-SurfacePatch(GRASS,AIR,62,76,SAND)
+Ore(DIRT:1,20,25,90.0,61,64,SAND:0)
+Ore(GRASS,20,100,90.0,62,64,SAND:0)
+Ore(GRASS,20,100,50.0,107,108,SAND:0)
+SurfacePatch(GRASS,AIR,62,76,SAND:0)
 CustomObject(AcaciaSavanna9,AcaciaSavanna8,AcaciaSavanna7,AcaciaSavanna6,AcaciaSavanna5,AcaciaSavanna4,AcaciaSavanna3,AcaciaSavanna2,AcaciaSavanna18,AcaciaSavanna17,AcaciaSavanna16,AcaciaSavanna15,AcaciaSavanna14,AcaciaSavanna13,AcaciaSavanna12,AcaciaSavanna11,AcaciaSavanna10,AcaciaSavanna1)
 Tree(10,Acacia,10)
 CustomObject(ShrubAcacia1,ShrubAcacia1,ShrubAcacia2,ShrubAcacia3,ShrubAcacia4,ShrubAcacia5,ShrubAcacia6,ShrubAcacia7)
@@ -197,13 +207,13 @@ CustomObject(ShrubAcacia1,ShrubAcacia1,ShrubAcacia2,ShrubAcacia3,ShrubAcacia4,Sh
 CustomObject(ShrubAcacia1,ShrubAcacia1,ShrubAcacia2,ShrubAcacia3,ShrubAcacia4,ShrubAcacia5,ShrubAcacia6,ShrubAcacia7)
 CustomObject(AcaciaSavanna9,AcaciaSavanna8,AcaciaSavanna7,AcaciaSavanna6,AcaciaSavanna5,AcaciaSavanna4,AcaciaSavanna3,AcaciaSavanna2,AcaciaSavanna18,AcaciaSavanna17,AcaciaSavanna16,AcaciaSavanna15,AcaciaSavanna14,AcaciaSavanna13,AcaciaSavanna12,AcaciaSavanna11,AcaciaSavanna10,AcaciaSavanna1)
 CustomObject(AcaciaSavanna9,AcaciaSavanna8,AcaciaSavanna7,AcaciaSavanna6,AcaciaSavanna5,AcaciaSavanna4,AcaciaSavanna3,AcaciaSavanna2,AcaciaSavanna18,AcaciaSavanna17,AcaciaSavanna16,AcaciaSavanna15,AcaciaSavanna14,AcaciaSavanna13,AcaciaSavanna12,AcaciaSavanna11,AcaciaSavanna10,AcaciaSavanna1)
-Grass(Tallgrass,NotGrouped,15,33.0,GRASS,DIRT)
-Plant(LargeFern,25,70.0,41,139,GRASS,DIRT)
-Plant(Fern,20,75.0,41,139,GRASS,DIRT)
-Plant(OxeyeDaisy,10,75.0,41,139,GRASS,DIRT)
-Plant(AzureBluet,10,75.0,41,139,GRASS,DIRT)
-Liquid(WATER,20,100.0,19,139,STONE:0)
-Plant(BrownMushroom,1,10.0,0,139,GRASS,DIRT)
+Grass(Tallgrass,NotGrouped,15,33.0,GRASS:0,DIRT:0)
+Plant(LargeFern,25,70.0,41,139,GRASS:0,DIRT:0)
+Plant(Fern,20,75.0,41,139,GRASS:0,DIRT:0)
+Plant(OxeyeDaisy,10,75.0,41,139,GRASS:0,DIRT:0)
+Plant(AzureBluet,10,75.0,41,139,GRASS:0,DIRT:0)
+Liquid(STATIONARY_WATER,20,100.0,19,139,STONE:0)
+Plant(BrownMushroom,1,10.0,0,139,GRASS:0,DIRT:0)
 CustomObject(SandOasis1,SandOasis2,SandOasis3,SandOasis4,SandOasis5)
 CustomObject(SandSmallLake1,SandSmallLake2,SandSmallLake3,SandSmallLake4,SandSmallLake5,SandSmallLake6,SandSmallLake7,SandSmallLake8,SandSmallLake9,SandSmallLake10,SandSmallLake11,SandSmallLake12)
 
@@ -212,6 +222,8 @@ CustomObject(SandSmallLake1,SandSmallLake2,SandSmallLake3,SandSmallLake4,SandSma
 # |                         Sapling resource                        | #
 # +-----------------------------------------------------------------+ #
 #######################################################################
+
+InheritSaplingResource: false
 
 
 #######################################################################

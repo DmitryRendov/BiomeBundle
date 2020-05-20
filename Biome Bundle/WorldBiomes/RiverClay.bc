@@ -22,7 +22,7 @@ BiomeRarity: 95
 
 BiomeColor: #106EB6
 
-ReplaceToBiomeName: River
+ReplaceToBiomeName: minecraft:river
 
 ####################
 # Isle biomes only #
@@ -113,7 +113,7 @@ GroundBlock: DIRT
 
 SurfaceAndGroundControl: 
 
-ReplacedBlocks: (AIR,LAVA,1,10)
+ReplacedBlocks: (AIR,STATIONARY_LAVA,1,10)
 
 ################################
 # Water / Lava & Frozen States #
@@ -154,6 +154,16 @@ FoliageColor: #FFFFFF
 
 FoliageColorIsMultiplier: true
 
+FogColor: #000000
+
+FogDensity: 0.5
+
+FogTimeWeight: 0.1
+
+FogRainWeight: 0.25
+
+FogThunderWeight: 0.5
+
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -177,20 +187,22 @@ Ore(SAND,8,10,50.0,0,255,STONE:0,HARD_CLAY)
 Ore(STONE:5,32,20,100.0,0,69,STONE:0)
 Ore(STONE:3,32,20,100.0,0,69,STONE:0)
 Ore(STONE:1,32,20,100.0,0,69,STONE:0)
-SmallLake(LAVA,6,33.0,1,8)
+SmallLake(STATIONARY_LAVA,6,33.0,1,8)
 CustomObject(JungleRainforest1,JungleRainforest2,JungleRainforest3,JungleRainforest4,JungleRainforest5,JungleRainforest6,JungleRainforest7,JungleRainforest8,JungleRainforest9,JungleRainforest10)
 Ore(DIRT,32,20,100.0,0,139,HARD_CLAY)
 Ore(SAND:1,35,40,100.0,75,255,HARD_CLAY)
 Ore(GRASS,20,20,100.0,86,101,HARD_CLAY)
-UnderWaterOre(SAND,7,3,100.0,DIRT,GRASS)
-UnderWaterOre(CLAY,7,3,100.0,DIRT,STONE:0,GRAVEL)
-UnderWaterOre(GRAVEL,6,1,100.0,DIRT,GRASS)
+UnderWaterOre(SAND,7,3,100.0,DIRT:0,GRASS:0)
+UnderWaterOre(CLAY,7,3,100.0,DIRT:0,STONE:0,GRAVEL)
+UnderWaterOre(GRAVEL,6,1,100.0,DIRT:0,GRASS:0)
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
 # |                         Sapling resource                        | #
 # +-----------------------------------------------------------------+ #
 #######################################################################
+
+InheritSaplingResource: false
 
 
 #######################################################################

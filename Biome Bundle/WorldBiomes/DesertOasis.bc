@@ -22,7 +22,7 @@ BiomeRarity: 92
 
 BiomeColor: #89CA55
 
-ReplaceToBiomeName: Jungle
+ReplaceToBiomeName: minecraft:jungle
 
 ####################
 # Isle biomes only #
@@ -113,7 +113,7 @@ GroundBlock: SANDSTONE
 
 SurfaceAndGroundControl: 
 
-ReplacedBlocks: (AIR,LAVA,1,10)
+ReplacedBlocks: (AIR,STATIONARY_LAVA,1,10)
 
 ################################
 # Water / Lava & Frozen States #
@@ -154,6 +154,16 @@ FoliageColor: #FFFFFF
 
 FoliageColorIsMultiplier: true
 
+FogColor: #000000
+
+FogDensity: 0.5
+
+FogTimeWeight: 0.1
+
+FogRainWeight: 0.25
+
+FogThunderWeight: 0.5
+
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -178,40 +188,42 @@ Ore(STONE:5,32,20,100.0,0,69,STONE:0)
 Ore(STONE:3,32,20,100.0,0,69,STONE:0)
 Ore(STONE:1,32,20,100.0,0,69,STONE:0)
 CustomObject(cavepocket1Copy,cavepocket2Copy,cavepocket3Copy,cavepocket9Copy,cavepocket4,cavepocket5,cavepocket6,cavepocket7,cavepocket8,cavepocket10,cavepocket11,cavepocket12,cavepocket13,cavepocket14,cavepocket15,cavepocket16,cavepocket17)
-SmallLake(LAVA,6,33.0,1,8)
+SmallLake(STATIONARY_LAVA,6,33.0,1,8)
 CustomObject(SmallLake1,SandSmallLake2,SandSmallLake3,SandSmallLake4,SandSmallLake5,SandSmallLake6,SandSmallLake7,SandSmallLake8,SandSmallLake9,SandSmallLake10,SandSmallLake11,SandSmallLake12)
 UnderGroundLake(25,60,2,5.0,0,61)
-UnderWaterOre(SAND,7,3,100.0,DIRT,GRASS)
-UnderWaterOre(GRAVEL,6,1,100.0,DIRT,GRASS)
-Ore(STONE,15,15,100.0,75,255,GRASS)
-Ore(GRAVEL,15,15,100.0,75,255,GRASS)
+UnderWaterOre(SAND,7,3,100.0,DIRT:0,GRASS:0)
+UnderWaterOre(GRAVEL,6,1,100.0,DIRT:0,GRASS:0)
+Ore(STONE,15,15,100.0,75,255,GRASS:0)
+Ore(GRAVEL,15,15,100.0,75,255,GRASS:0)
 Tree(5,Acacia,50,GroundBush,100)
 CustomObject(JunglePalm1,JunglePalm2,JunglePalm3,JunglePalm4,JunglePalm5,JunglePalm6,JunglePalm7,JunglePalm8,JunglePalm9)
-Grass(DeadBush,NotGrouped,4,100.0,SAND,HARD_CLAY,STAINED_CLAY,DIRT)
-Reed(SUGAR_CANE_BLOCK,3,100.0,0,139,GRASS,DIRT,SAND)
-Cactus(CACTUS,10,100.0,0,139,SAND)
-Ore(SAND,20,85,50.0,64,101,GRASS)
-Ore(SAND,50,85,50.0,56,61,GRASS)
-Boulder(STONE,2,10.0,71,111,GRASS)
-Boulder(SANDSTONE,2,10.0,71,111,GRASS)
-Grass(LONG_GRASS,Grouped,10,10.0,GRASS,DIRT)
-Grass(Fern,NotGrouped,4,50.0,GRASS,DIRT)
-Grass(Tallgrass,NotGrouped,4,50.0,GRASS,DIRT)
-Plant(LargeFern,10,90.0,41,139,GRASS,DIRT)
-Plant(Poppy,2,20.0,0,139,GRASS,DIRT)
-Plant(Dandelion,2,20.0,0,139,GRASS,DIRT)
-Plant(Lilac,2,20.0,0,139,GRASS,DIRT)
-Plant(RoseBush,2,20.0,0,139,GRASS,DIRT)
-Plant(Peony,2,20.0,0,139,GRASS,DIRT)
-Reed(SUGAR_CANE_BLOCK,3,100.0,0,139,GRASS,DIRT,SAND)
-Well(SANDSTONE,STEP:1,WATER,1,0.1,13,139,SAND)
-Plant(MELON_BLOCK,2,100.0,0,139,GRASS,DIRT,DIRT:2)
+Grass(DeadBush,NotGrouped,4,100.0,SAND:0,HARD_CLAY,STAINED_CLAY:0,DIRT:0)
+Reed(SUGAR_CANE_BLOCK,3,100.0,0,139,GRASS:0,DIRT:0,SAND:0)
+Cactus(CACTUS,10,100.0,0,139,SAND:0)
+Ore(SAND,20,85,50.0,64,101,GRASS:0)
+Ore(SAND,50,85,50.0,56,61,GRASS:0)
+Boulder(STONE,2,10.0,71,111,GRASS:0)
+Boulder(SANDSTONE,2,10.0,71,111,GRASS:0)
+Grass(LONG_GRASS,Grouped,10,10.0,GRASS:0,DIRT:0)
+Grass(Fern,NotGrouped,4,50.0,GRASS:0,DIRT:0)
+Grass(Tallgrass,NotGrouped,4,50.0,GRASS:0,DIRT:0)
+Plant(LargeFern,10,90.0,41,139,GRASS:0,DIRT:0)
+Plant(Poppy,2,20.0,0,139,GRASS:0,DIRT:0)
+Plant(Dandelion,2,20.0,0,139,GRASS:0,DIRT:0)
+Plant(Lilac,2,20.0,0,139,GRASS:0,DIRT:0)
+Plant(RoseBush,2,20.0,0,139,GRASS:0,DIRT:0)
+Plant(Peony,2,20.0,0,139,GRASS:0,DIRT:0)
+Reed(SUGAR_CANE_BLOCK,3,100.0,0,139,GRASS:0,DIRT:0,SAND:0)
+Well(SANDSTONE,STEP:1,STATIONARY_WATER,1,0.1,13,139,SAND:0)
+Plant(MELON_BLOCK,2,100.0,0,139,GRASS:0,DIRT:0,DIRT:2)
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
 # |                         Sapling resource                        | #
 # +-----------------------------------------------------------------+ #
 #######################################################################
+
+InheritSaplingResource: false
 
 
 #######################################################################

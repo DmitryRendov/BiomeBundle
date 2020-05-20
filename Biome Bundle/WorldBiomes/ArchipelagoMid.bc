@@ -22,7 +22,7 @@ BiomeRarity: 99
 
 BiomeColor: #037123
 
-ReplaceToBiomeName: Jungle
+ReplaceToBiomeName: minecraft:jungle
 
 ####################
 # Isle biomes only #
@@ -113,7 +113,7 @@ GroundBlock: DIRT
 
 SurfaceAndGroundControl: 
 
-ReplacedBlocks: (AIR,LAVA,1,10)
+ReplacedBlocks: (AIR,STATIONARY_LAVA,1,10)
 
 ################################
 # Water / Lava & Frozen States #
@@ -154,6 +154,16 @@ FoliageColor: #FFFFFF
 
 FoliageColorIsMultiplier: true
 
+FogColor: #000000
+
+FogDensity: 0.5
+
+FogTimeWeight: 0.1
+
+FogRainWeight: 0.25
+
+FogThunderWeight: 0.5
+
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -162,14 +172,14 @@ FoliageColorIsMultiplier: true
 #######################################################################
 
 Dungeon(8,100.0,0,160)
-Vein(COAL_ORE,10,30,70.0,18,24,75,0,250,STONE:0,DIRT,HARD_CLAY)
-Vein(IRON_ORE,10,30,70.0,18,24,66,0,250,STONE:0,DIRT,HARD_CLAY)
+Vein(COAL_ORE,10,30,70.0,18,24,75,0,250,STONE:0,DIRT:0,HARD_CLAY)
+Vein(IRON_ORE,10,30,70.0,18,24,66,0,250,STONE:0,DIRT:0,HARD_CLAY)
 Vein(GOLD_ORE,10,30,50.0,8,14,66,0,250,STONE:0,HARD_CLAY)
 Vein(REDSTONE_ORE,10,30,50.0,16,18,66,0,250,STONE:0,HARD_CLAY)
 Vein(LAPIS_ORE,10,30,50.0,8,12,66,0,250,STONE:0,HARD_CLAY)
 Vein(EMERALD_ORE,10,20,15.0,4,12,66,0,35,STONE:0)
-Ore(COAL_ORE,12,15,80.0,0,250,STONE:0,DIRT,HARD_CLAY)
-Ore(IRON_ORE,8,15,80.0,0,250,STONE:0,DIRT,HARD_CLAY)
+Ore(COAL_ORE,12,15,80.0,0,250,STONE:0,DIRT:0,HARD_CLAY)
+Ore(IRON_ORE,8,15,80.0,0,250,STONE:0,DIRT:0,HARD_CLAY)
 Ore(GOLD_ORE,8,6,40.0,0,250,STONE:0,HARD_CLAY)
 Ore(REDSTONE_ORE,12,8,50.0,0,250,STONE:0,HARD_CLAY)
 Ore(DIAMOND_ORE,8,4,50.0,0,250,STONE:0)
@@ -192,12 +202,12 @@ CustomObject(SmallLake1,SmallLake2,SmallLake3,SmallLake4,SmallLake5,SmallLake6,S
 CustomObject(OakMangroveTree1,OakMangroveTree2,OakMangroveTree3,OakMangroveTree4,OakMangroveTree5,OakMangroveTree6)
 CustomObject(OakMangroveTree1,OakMangroveTree2,OakMangroveTree3,OakMangroveTree4,OakMangroveTree5,OakMangroveTree6)
 UnderGroundLake(25,60,2,5.0,0,50)
-SmallLake(LAVA,6,33.0,1,8)
-Liquid(WATER,20,100.0,8,255,STONE:0,DIRT,HARD_CLAY,STAINED_CLAY)
-Liquid(LAVA,10,100.0,8,65,STONE:0,DIRT,HARD_CLAY,STAINED_CLAY)
-UnderWaterOre(SAND,7,3,100.0,DIRT,GRASS)
-UnderWaterOre(CLAY,7,3,100.0,DIRT,STONE:0,GRAVEL)
-UnderWaterOre(GRAVEL,6,1,100.0,DIRT,GRASS)
+SmallLake(STATIONARY_LAVA,6,33.0,1,8)
+Liquid(STATIONARY_WATER,20,100.0,8,255,STONE:0,DIRT:0,HARD_CLAY,STAINED_CLAY:0)
+Liquid(STATIONARY_LAVA,10,100.0,8,65,STONE:0,DIRT:0,HARD_CLAY,STAINED_CLAY:0)
+UnderWaterOre(SAND,7,3,100.0,DIRT:0,GRASS:0)
+UnderWaterOre(CLAY,7,3,100.0,DIRT:0,STONE:0,GRAVEL)
+UnderWaterOre(GRAVEL,6,1,100.0,DIRT:0,GRASS:0)
 CustomObject(plainsclutter1,plainsclutter2,plainsclutter3,plainsclutter4,plainsclutter5,plainsclutter6)
 CustomObject(rockyhole1,rockyhole2,rockyhole3,rockyhole4,rockyhole5)
 CustomStructure(RiverRocks,0.5,TotemBase,0.1,GravelOreT1,1.0)
@@ -210,18 +220,20 @@ CustomObject(ShrubJungle1,ShrubJungle2,ShrubJungle3,ShrubJungle4,ShrubJungle5)
 CustomObject(Geode1,Geode2,Geode3,Geode4,Geode5,Geode6)
 CustomObject(JungleForest1,JungleForest2,JungleForest3,JungleForest4,JungleForest5,JungleForest6,JungleForest7,JungleForest8)
 Tree(5,GroundBush,10)
-Plant(Poppy,4,100.0,0,139,GRASS,DIRT)
-Plant(Dandelion,4,100.0,0,139,GRASS,DIRT)
-Grass(Fern,NotGrouped,10,100.0,GRASS,DIRT)
-Grass(Tallgrass,NotGrouped,10,100.0,GRASS,DIRT)
-SmallLake(LAVA,2,1.0,16,31)
-Plant(MELON_BLOCK,1,100.0,0,139,GRASS,DIRT,DIRT:2)
+Plant(Poppy,4,100.0,0,139,GRASS:0,DIRT:0)
+Plant(Dandelion,4,100.0,0,139,GRASS:0,DIRT:0)
+Grass(Fern,NotGrouped,10,100.0,GRASS:0,DIRT:0)
+Grass(Tallgrass,NotGrouped,10,100.0,GRASS:0,DIRT:0)
+SmallLake(STATIONARY_LAVA,2,1.0,16,31)
+Plant(MELON_BLOCK,1,100.0,0,139,GRASS:0,DIRT:0,DIRT:2)
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
 # |                         Sapling resource                        | #
 # +-----------------------------------------------------------------+ #
 #######################################################################
+
+InheritSaplingResource: false
 
 
 #######################################################################
